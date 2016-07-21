@@ -33,9 +33,7 @@ module Faker
         ( rand(9) + 1 ).to_s
       end
 
-      def digit
-        rand(10).to_s
-      end
+      def digit; rand(10).to_s; end
 
       def hexadecimal(digits)
         hex = ""
@@ -59,20 +57,12 @@ module Faker
 
       private
 
-      def greater_than_zero(number)
-        should_be(number, :>)
-      end
+      def greater_than_zero(number); should_be(number, :>); end
 
-      def less_than_zero(number)
-        should_be(number, :<)
-      end
+      def less_than_zero(number); should_be(number, :<); end
 
       def should_be(number, method_to_compare)
-        if number.send(method_to_compare, 0)
-          number
-        else
-          number * -1
-        end
+        number.send(method_to_compare, 0) ? number : number * -1
       end
     end
   end

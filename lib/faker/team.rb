@@ -3,18 +3,9 @@ module Faker
     flexible :team
 
     class << self
-      def name
-        parse('team.name')
-      end
-
-      def creature
-        fetch('team.creature')
-      end
-
-      def state
-        fetch('address.state')
-      end
+      def name;     parse('team.name'); end
+      def creature; fetch('team.creature'); end
+      def state;    fetch('address.state'); end
     end
-
   end
 end

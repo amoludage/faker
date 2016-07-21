@@ -3,26 +3,17 @@ module Faker
     flexible :company
 
     class << self
-      def name
-        parse('company.name')
-      end
 
-      def suffix
-        fetch('company.suffix')
-      end
-
-      def industry
-        fetch('company.industry')
-      end
+      def name;     parse('company.name');     end
+      def suffix;   fetch('company.suffix');   end
+      def industry; fetch('company.industry'); end
 
       # Generate a buzzword-laden catch phrase.
       def catch_phrase
         translate('faker.company.buzzwords').collect {|list| list.sample }.join(' ')
       end
 
-      def buzzword
-        translate('faker.company.buzzwords').flatten.sample
-      end
+      def buzzword; translate('faker.company.buzzwords').flatten.sample end
 
       # When a straight answer won't do, BS to the rescue!
       def bs
@@ -55,9 +46,7 @@ module Faker
         (99 - (abn_checksum(abn) % 89)).to_s + base
       end
 
-      def profession
-        fetch('company.profession')
-      end
+      def profession; fetch('company.profession'); end
 
     private
 

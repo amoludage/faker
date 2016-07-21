@@ -2,21 +2,10 @@ module Faker
   class Shakespeare < Base
     class << self
 
-      def hamlet_quote
-        hamlet.sample
-      end
-
-      def as_you_like_it_quote
-        as_you_like_it.sample
-      end
-
-      def king_richard_iii_quote
-        king_richard_iii.sample
-      end
-
-      def romeo_and_juliet_quote
-        romeo_and_juliet.sample
-      end
+      def hamlet_quote;           hamlet.sample;           end
+      def as_you_like_it_quote;   as_you_like_it.sample;   end
+      def king_richard_iii_quote; king_richard_iii.sample; end
+      def romeo_and_juliet_quote; romeo_and_juliet.sample; end
 
       def hamlet
         ["To be, or not to be: that is the question.",

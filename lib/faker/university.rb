@@ -3,18 +3,9 @@ module Faker
     flexible :university
 
     class << self
-      def name
-        parse('university.name')
-      end
-
-      def prefix
-        fetch('university.prefix')
-      end
-
-      def suffix
-        fetch('university.suffix')
-      end
-
+      def name;   parse('university.name'); end
+      def prefix; fetch('university.prefix'); end
+      def suffix; fetch('university.suffix'); end
     end
   end
 end

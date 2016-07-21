@@ -10,13 +10,8 @@ module Faker
         testnet: 111
       }
 
-      def address
-        address_for(:main)
-      end
-
-      def testnet_address
-        address_for(:testnet)
-      end
+      def address;         address_for(:main);    end
+      def testnet_address; address_for(:testnet); end
 
       protected
 

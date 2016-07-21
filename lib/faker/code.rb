@@ -5,9 +5,7 @@ module Faker
 
       # Generates a 10 digit NPI (National Provider Identifier
       # issued to health care providers in the United States)
-      def npi
-        Random.new.rand(10 ** 10).to_s.rjust(10, '0')
-      end
+      def npi; Random.new.rand(10 ** 10).to_s.rjust(10, '0'); end
 
       # By default generates 10 sign isbn code in format 123456789-X
       # You can pass 13 to generate new 13 sign code
@@ -39,15 +37,11 @@ module Faker
       end
 
       # Generate GSM modem, device or mobile phone 15 digit IMEI number.
-      def imei
-        generate_imei
-      end
+      def imei; generate_imei; end
 
       # Retrieves a real Amazon ASIN code list taken from
       # https://archive.org/details/asin_listing
-      def asin
-        fetch('code.asin')
-      end
+      def asin; fetch('code.asin'); end
 
     private
 
@@ -81,9 +75,7 @@ module Faker
           if (pos + len_offset) % 2 != 0
             t = str[pos] * 2
 
-            if t > 9
-              t -= 9
-            end
+            t -= 9 if t > 9
 
             sum += t
           else

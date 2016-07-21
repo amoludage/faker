@@ -18,9 +18,7 @@ module Faker
         word_list.shuffle[0, resolved_num]
       end
 
-      def character
-        CHARACTERS.sample
-      end
+      def character; CHARACTERS.sample; end
 
       def characters(char_count = 255)
         char_count = resolve(char_count)

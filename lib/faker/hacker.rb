@@ -4,9 +4,8 @@ module Faker
     flexible :hacker
 
     class << self
-      def say_something_smart
-        phrases.sample
-      end
+
+      def say_something_smart; phrases.sample; end
 
       def abbreviation;  fetch('hacker.abbreviation'); end
       def adjective;     fetch('hacker.adjective'); end

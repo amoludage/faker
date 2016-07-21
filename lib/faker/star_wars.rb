@@ -1,29 +1,13 @@
 module Faker
   class StarWars < Base
     class << self
-      def character
-        characters.sample
-      end
 
-      def droid
-        droids.sample
-      end
-
-      def planet
-        planets.sample
-      end
-
-      def quote
-        quotes.sample
-      end
-
-      def specie
-        species.sample
-      end
-
-      def vehicle
-        vehicles.sample
-      end
+      def character; characters.sample; end
+      def droid;     droids.sample; end
+      def planet;    planets.sample; end
+      def quote;     quotes.sample; end
+      def specie;    species.sample; end
+      def vehicle;   vehicles.sample; end
 
       def characters
         ['Padme Amidala', 'Jar Jar Binks', 'Borvo the Hutt', 'Darth Caedus', 'Boba Fett', 'Jabba the Hutt', 'Obi-Wan Kenobi', 'Darth Maul', 'Leia Organa', 'Sheev Palpatine',

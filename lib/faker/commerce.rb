@@ -2,9 +2,8 @@ module Faker
   class Commerce < Base
 
     class << self
-      def color
-        fetch('color.name')
-      end
+
+      def color; fetch('color.name'); end
 
       def department(max = 3, fixed_amount = false)
         num = max if fixed_amount
@@ -12,20 +11,14 @@ module Faker
 
         categories = categories(num)
 
-        if num > 1
-          merge_categories(categories)
-        else
-          categories[0]
-        end
+        num > 1 ? merge_categories(categories) : categories[0]
       end
 
       def product_name
         fetch('commerce.product_name.adjective') + ' ' + fetch('commerce.product_name.material') + ' ' + fetch('commerce.product_name.product')
       end
 
-      def material
-        fetch('commerce.product_name.material')
-      end
+      def material; fetch('commerce.product_name.material'); end
 
       def price(range=0..100.0)
         random = Random::DEFAULT
